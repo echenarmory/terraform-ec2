@@ -2,7 +2,7 @@
 # Create a new instance of an Ubuntu 16.04 on an
 # t2.micro node with an AWS Tag naming it "armory-pov"
 terraform {
-   required_version = "0.12.24"
+   required_version = "0.12.23"
   }
 provider "aws" {
   region = "us-west-2"
