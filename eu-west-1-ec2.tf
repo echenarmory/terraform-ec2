@@ -2,7 +2,7 @@
 # Create a new instance of an Ubuntu 16.04 on an
 # t2.micro node with an AWS Tag naming it "armory-pov"
 provider "aws" {
-  region = "us-west-2"
+  region = "eu-west-1"
 }
 
 data "aws_ami" "ubuntu" {
@@ -22,7 +22,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "0813245c0939ab3ca"
+  ami           = "0a4fbfab82b4aee91"
   instance_type = "t2.micro"
 
   tags = {
