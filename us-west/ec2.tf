@@ -7,6 +7,18 @@ terraform {
 provider "aws" {
   region = "us-west-2"
 }
+variable "environment_time" {
+  default = "{{timestamp}}"
+}
+
+resource "aws_s3_bucket" "mybucket" {
+  bucket = "terraformer-echen-${var.environment_time}"
+  acl = "public-read"
+
+tags = {
+  Name = "Bucket for echen test ${var.environment_time}"
+  }
+}
 
 data "aws_ami" "ubuntu" {
   most_recent = true
