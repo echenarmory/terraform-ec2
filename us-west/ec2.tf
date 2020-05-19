@@ -12,12 +12,8 @@ variable "environment_time" {
 }
 
 resource "aws_s3_bucket" "mybucket" {
-  bucket = "terraformer-echen-${var.environment_time}"
+  bucket = "echen-terraform-tempbucket"
   acl = "public-read"
-
-tags = {
-  Name = "Bucket for echen test ${var.environment_time}"
-  }
 }
 
 data "aws_ami" "ubuntu" {
