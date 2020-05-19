@@ -10,7 +10,7 @@ data "aws_ami" "ubuntu" {
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-????????"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20200429"]
   }
 
   filter {
@@ -22,7 +22,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "0a4fbfab82b4aee91"
+  ami           = "ami-0a4fbfab82b4aee91"
   instance_type = "t2.micro"
 
   tags = {
